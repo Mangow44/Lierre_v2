@@ -28,7 +28,11 @@
 
 <style>
 	.burger-container {
-		position: relative;
+		z-index: 20;
+
+		position: fixed;
+		top: 1rem;
+		right: 1rem;
 
 		height: 2.6rem;
 		width: 2.6rem;
@@ -38,6 +42,8 @@
 		transition: all 0.5s ease;
 
 		cursor: pointer;
+
+		mix-blend-mode: exclusion;
 	}
 
 	.burger-container:hover {

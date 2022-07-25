@@ -6,7 +6,10 @@
 	// Attention pour accéder à static ne pas oublier le '/' devant
 
 	// faire une flèche qui pointe vers le bas
-	// faire une "scroll bar" qui montre l'avancement dans le site : body.height / current pos un truc comme ça
+
+	// bug du cd du burger à améliorer, tu l'ouvres tu cliques sur projets
+	// et l'ouvre avant que l'anim est fermé car le cd est tj on
+	// Peut être faire un prop pour le cd genre animRuning = true ou false si y'a une anim ou jsp quoi
 </script>
 
 <main class="scrollable">
