@@ -1,0 +1,34 @@
+*,
+::before,
+::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+	display: none;
+}
+
+@font-face {
+	font-family: morris;
+	src: url('/fonts/morris-roman/MorrisRomanBlack.ttf');
+}
+
+@font-face {
+	font-family: franchise;
+	src: url('/fonts/franchise_2/Franchise.ttf');
+}
+
+.div-centered {
+	height: 100%;
+	width: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.p-centered {
+	text-align: center;
+}
