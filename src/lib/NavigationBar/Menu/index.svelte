@@ -1,29 +1,21 @@
 <script>
+	import { goto } from '$app/navigation';
 	import FullScreenSliding from '$lib/Effects/FullScreenSliding/index.svelte';
 	import ContentSliding from '$lib/Effects/ContentSliding/index.svelte';
 	import { menuContent } from '$lib/data/menu/menuContent';
 	import { menuBands, menuDelay } from '$lib/data/menu/menuBands';
-	import { burgerDelay } from '$lib/data/menu/burgerDelay';
-	import { goto } from '$app/navigation';
 
 	export let slideMenu = false;
-	let displayMenu = false;
-
-	/**
-	 * Lorsque l'animation commence on affiche le menu
-	 * Lorsque l'animation est terminée on cache le menu
-	 */
-	$: if (slideMenu) displayMenu = true;
-	$: if (!slideMenu) setTimeout(() => (displayMenu = false), burgerDelay);
 </script>
 
-<div class="menu-container {displayMenu ? '' : 'hide-menu'}">
+<div class="menu-container">
 	<FullScreenSliding
 		bands={menuBands}
 		direction={'right'}
 		transition={slideMenu}
 		delay={menuDelay}
 		backgroundColor={'black'}
+		id={'menu-sliding'}
 	/>
 
 	<div class="content-sliding">
@@ -60,10 +52,6 @@
 
 		height: 100vh;
 		width: 100%;
-	}
-
-	.hide-menu {
-		z-index: -1;
 	}
 
 	.div-centered :global(.copyright) {

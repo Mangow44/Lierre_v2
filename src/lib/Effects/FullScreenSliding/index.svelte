@@ -19,16 +19,20 @@
 	export let delay = 1;
 	export let backgroundColor = '#d8b08c';
 	export let zIndex = 1;
+	export let id = 'undefined';
 </script>
 
-<div class="full-screen-sliding">
+<div
+	{id}
+	class="full-screen-sliding 
+		{transition ? 'transition' : ''}"
+>
 	{#each bands as band, i}
 		<span
 			class="band 
 				{direction == 'left' ? 'translate-to-left' : ''}
 				{direction == 'right' ? 'translate-to-right' : ''}
-				{animation ? 'animation' : ''}
-				{transition ? 'transition' : ''}"
+				{animation ? 'animation' : ''}"
 			style="height: {100 / bands.length}vh;
 				top: {i * (100 / bands.length)}vh;
 				animation-delay: {delay + band}s;

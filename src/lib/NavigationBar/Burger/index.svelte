@@ -1,27 +1,13 @@
 <script>
 	export let slideMenu = false;
-
-	let updateAllowed = true;
-
-	/**
-	 * Fonction qui évite de spammer le bouton slideMenu, ce qui rend l'animation moins belle
-	 * car elle n'a pas le temps de se terminer, là on attend qu'elle se termine
-	 * avant de rendre le changement d'état de slideMenu opérationnel
-	 * @param duration
-	 */
-	const updateslideMenu = (duration) => {
-		if (!updateAllowed) return;
-
-		slideMenu = !slideMenu;
-		updateAllowed = false;
-
-		setTimeout(() => {
-			updateAllowed = true;
-		}, duration);
-	};
 </script>
 
-<div class="burger-container" on:click={() => updateslideMenu(1100)}>
+<div
+	class="burger-container"
+	on:click={() => {
+		slideMenu = !slideMenu;
+	}}
+>
 	<span class="line {slideMenu ? 'cross' : ''}" />
 	<span class="line {slideMenu ? 'cross' : ''}" />
 </div>

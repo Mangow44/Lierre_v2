@@ -10,12 +10,14 @@
 	// bug du cd du burger à améliorer, tu l'ouvres tu cliques sur projets
 	// et l'ouvre avant que l'anim est fermé car le cd est tj on
 	// Peut être faire un prop pour le cd genre animRuning = true ou false si y'a une anim ou jsp quoi
+
+	// puis voir feuille pour la suite
 </script>
 
-<main class="scrollable">
+<main>
 	<div id="home" class="page-container" style="background-color: #0f6466;">
 		<Logo />
-		<FullScreenSliding bands={indexBands} animation={true} />
+		<FullScreenSliding bands={indexBands} animation={true} id={'home-sliding'} />
 	</div>
 
 	<div id="galerie" class="page-container" style="background-color: blue;">galerie</div>
